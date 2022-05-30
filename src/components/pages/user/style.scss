@@ -1,0 +1,85 @@
+@import '../../../assets/scss/constant/media.scss';
+
+.user-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.user-data-wrapper {
+    padding: 10px;
+}
+
+.user-data {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 35px;
+    width: 100%;
+
+    @media (max-width: $laptop) {
+        font-size: 29px;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 25px;
+    }
+
+
+    @media (max-width: 650px) {
+        font-size: 22px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 17px;
+    }
+
+    @media (max-width: $mobileL) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.user-data-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+
+    @media (max-width: $mobileL) {
+        max-width: 250px;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.cutLongText {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+
+
+
+.user-data-img {
+    max-width: 250px;
+    max-height: 250px;
+    margin: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.wrapper-repo-list {
+    width: 100%;
+}
+
+.wrapper-repo {
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border: solid 1px black;
+}

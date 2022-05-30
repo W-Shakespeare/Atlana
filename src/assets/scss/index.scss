@@ -1,0 +1,61 @@
+@import './constant/media.scss';
+@import './fonts.css';
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+html {
+    font-size: 20px;
+    font-family: "Roboto";
+
+    @media (max-width:$tablet) {
+        font-size: 15px;
+    }
+}
+
+body {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+
+        /* ширина всей полосы прокрутки */
+        &-track {
+            background: gray;
+            /* цвет зоны отслеживания */
+        }
+
+        &-thumb {
+            background-color: gainsboro;
+            /* цвет бегунка */
+            border-radius: 10px;
+            /* округлось бегунка */
+            border: 2px solid gainsboro;
+            /* отступ вокруг бегунка */
+        }
+    }
+}
+
+.main {
+    h1 {
+        text-align: center;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper-searcher {
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+}
