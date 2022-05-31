@@ -50,8 +50,16 @@ export const User: FC<UserP> = (p) => {
               <div key={repo.node_id} className="wrapper-repo">
                 <a href={repo.html_url} target="_blank">
                   <div className="repo">
-                    <div className="cutLongText" key={repo.node_id}>
+                    <div className="repo-name cutLongText" key={repo.node_id}>
                       {repo.name}
+                    </div>
+                    <div className="wrapper-star-and-forks">
+                      <div className="repo-star">
+                        {`${repo.stargazers_count} Forks`}
+                      </div>
+                      <div className="repo-forks">
+                        {`${repo.forks_count} Stars`}
+                      </div>
                     </div>
                   </div>
                 </a>
