@@ -1,14 +1,22 @@
-import React from "react";
+import React, { FC } from "react";
 import "./style.scss";
 
-export const Searcher = ({
+interface Props {
+  onChange: (arr: Array<any>) => void;
+  searcherList: Array<any>;
+  searchrByField: string;
+  className?: string;
+  placeholder?: string;
+}
+
+export const Searcher: FC<Props> = ({
   onChange = (arr) => {},
   searcherList = [],
   searchrByField = "",
   className = "",
   placeholder = "Search",
 }) => {
-  const onWillChange = (e) => {
+  const onWillChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchedList = searcherList.filter((it) =>
       it[searchrByField].toLowerCase().includes(e.target.value.toLowerCase())
     );
